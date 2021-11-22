@@ -1,5 +1,9 @@
-#creating ec2 instance
-resource "aws_instance" "sample" {
-ami = "ami-06a0b4e3b7eb7a300"
-instance_type = "t2.micro"
+resource "aws_instance" "web" {
+  ami           = "ami-0108d6a82a783b352"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "HelloWorld"
+  }
 }
+
